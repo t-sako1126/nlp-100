@@ -1,0 +1,5 @@
+和集合: {'gr', 'se', 'di', 'ph', 'pa', 'ap', 'ad', 'ag', 'is', 'ra', 'ar'}
+積集合: {'pa', 'ap', 'ra', 'ar'}
+差集合: {'ad', 'di', 'is', 'se'}
+'se' in X: True
+'se' in Y: False
