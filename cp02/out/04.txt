@@ -1,0 +1,23 @@
+Mary
+Anna
+Emma
+Elizabeth
+Minnie
+Margaret
+Ida
+Alice
+Bertha
+Sarah
+
+$ head -n 10 cp02/text/popular-names.txt | cut -f1 
+
+Mary
+Anna
+Emma
+Elizabeth
+Minnie
+Margaret
+Ida
+Alice
+Bertha
+Sarah
