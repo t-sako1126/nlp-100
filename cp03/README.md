@@ -2,16 +2,16 @@
 ## links
 |問題|ソースコード|出力・結果|
 |-|-|-|
-|00|[00.py](code/00.py)|[00.txt](out/00.txt)|
-|01|[01.py](code/01.py)|[01.txt](out/01.txt)|
-|02|[02.py](code/02.py)|[02.txt](out/02.txt)|
-|02|[03.py](code/03.py)|[03.txt](out/03.txt)|
-|04|[04.py](code/04.py)|[04.txt](out/04.txt)|
-|05|[05.py](code/05.py)|[05.txt](out/05.txt)|
-|06|[06.py](code/06.py)|[06.txt](out/06.txt)|
-|07|[07.py](code/07.py)|[07.txt](out/07.txt)|
-|08|[08.py](code/08.py)|[08.txt](out/08.txt)|
-|09|[09.py](code/09.py)|[09.txt](out/09.txt)|
+|20|[22.py](code/20.py)|[20.txt](out/20.txt)|
+|21|[21.py](code/21.py)|[21.txt](out/21.txt)|
+|22|[22.py](code/22.py)|[22.txt](out/22.txt)|
+|22|[23.py](code/23.py)|[23.txt](out/23.txt)|
+|24|[24.py](code/24.py)|[24.txt](out/24.txt)|
+|25|[25.py](code/25.py)|[25.txt](out/25.txt)|
+|26|[26.py](code/26.py)|[26.txt](out/26.txt)|
+|27|[27.py](code/27.py)|[27.txt](out/27.txt)|
+|28|[28.py](code/28.py)|[28.txt](out/28.txt)|
+|29|[29.py](code/29.py)|[29.txt](out/29.txt)|
 
 
 
