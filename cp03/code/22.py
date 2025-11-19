@@ -6,7 +6,7 @@ output = "cp03/out/22.txt"
 with open(input, 'r', encoding='utf-8') as f:
     text = f.read()
     
-pattern = r'\[\[Category:([^\]|]+)(?:\|[^\]]*)?\]\]'  # カテゴリ名を抽出する正規表現
+pattern = r'\[\[Category:([^\]|]+)(?:\|[^\]]*)?\]\]'
 categories = re.findall(pattern, text)
 
 with open(output, 'w', encoding='utf-8') as out_file:
