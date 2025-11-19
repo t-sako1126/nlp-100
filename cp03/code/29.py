@@ -1,7 +1,7 @@
 import re
 import requests
 
-input = "cp03/out/20.txt"
+input = "jawiki-uk.txt"
 output = "cp03/out/29.txt"
 
 with open(input, 'r', encoding='utf-8') as f:

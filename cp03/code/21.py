@@ -1,6 +1,6 @@
 import re
 
-INPUT = "cp03/out/20.txt"
+INPUT = "jawiki-uk.txt"
 OUTPUT = "cp03/out/21.txt"
 
 with open(INPUT, 'r', encoding='utf-8') as f:

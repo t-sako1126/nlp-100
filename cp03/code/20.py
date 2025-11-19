@@ -3,7 +3,7 @@ import json
 
 INPUT = "cp03/jawiki-country.json.gz"
 
-OUTPUT = "cp03/out/20.txt"
+OUTPUT = "jawiki-uk.txt"
 
 with gzip.open(INPUT, 'rt', encoding='utf-8') as f:
     for line in f:
