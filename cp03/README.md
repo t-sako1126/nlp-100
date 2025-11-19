@@ -2,7 +2,7 @@
 ## links
 |問題|ソースコード|出力・結果|
 |-|-|-|
-|20|[22.py](code/20.py)|[20.txt](out/20.txt)|
+|20|[20.py](code/20.py)|[20.txt](out/20.txt)|
 |21|[21.py](code/21.py)|[21.txt](out/21.txt)|
 |22|[22.py](code/22.py)|[22.txt](out/22.txt)|
 |22|[23.py](code/23.py)|[23.txt](out/23.txt)|
