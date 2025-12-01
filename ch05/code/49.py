@@ -22,7 +22,7 @@ response = client.models.generate_content(
     contents=[{"role": "user", "parts": [{"text": content}]}],
 ) 
 
-print("トークン数(AI)：", response)
+print("トークン数(AI)：", response.text)
 
 # sudachipyを使ってトークン数を数える
 tokenizer_obj = sudachipy.Dictionary().create()
