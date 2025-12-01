@@ -1,0 +1,51 @@
+トークン数(AI)： sdk_http_response=HttpResponse(
+  headers=<dict len=11>
+) candidates=[Candidate(
+  citation_metadata=CitationMetadata(
+    citations=[
+      Citation(
+        end_index=629,
+        license='',
+        start_index=170,
+        uri='https://accessreading.org/download/samples/wagahaihanekodearu1.docx'
+      ),
+    ]
+  ),
+  content=Content(
+    parts=[
+      Part(
+        text="""与えられた文章のトークン数を数えます。
+
+一般的に、AIモデルにおける「トークン」の数え方は、使用されるエンコーディング（トークナイザ）によって異なります。ここでは、OpenAIのGPTモデル（GPT-3.5 Turbo、GPT-4など）で広く使われている`cl100k_base`エンコーディングを使用して計算します。
+
+対象の文章：
+「吾輩は猫である。名前はまだ無い。
+どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。
+吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。
+この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。
+ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。
+掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。
+第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。
+のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。
+これが人間の飲む煙草というものである事はようやくこの頃知った。」
+
+上記の文章を`cl100k_base`エンコーディングでトークン化すると、**304トークン**になります。"""
+      ),
+    ],
+    role='model'
+  ),
+  finish_reason=<FinishReason.STOP: 'STOP'>,
+  index=0
+)] create_time=None model_version='gemini-2.5-flash' prompt_feedback=None response_id='_f4raZzLMuuw0-kP59iZUQ' usage_metadata=GenerateContentResponseUsageMetadata(
+  candidates_token_count=394,
+  prompt_token_count=291,
+  prompt_tokens_details=[
+    ModalityTokenCount(
+      modality=<MediaModality.TEXT: 'TEXT'>,
+      token_count=291
+    ),
+  ],
+  thoughts_token_count=1863,
+  total_token_count=2548
+) automatic_function_calling_history=[] parsed=None
+トークン数(sudachipy)： 317
