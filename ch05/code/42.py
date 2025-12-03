@@ -41,7 +41,7 @@ prompt = f"""
 
 response = client.models.generate_content(
     model=MODEL,
-    contents=[{"role": "user", "parts": [{"text": prompt}]}],
+    contents=prompt,
 )
 
 result_text = response.candidates[0].content.parts[0].text

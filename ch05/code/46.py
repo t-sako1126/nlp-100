@@ -2,7 +2,7 @@ from google import genai
 
 client = genai.Client()
 
-content = """
+prompt = """
 あなたは川柳作家として、五七五のリズムを用いた川柳を生成します。
 以下の特性・要素を必ず踏まえて作品を作ってください。
 
@@ -63,6 +63,6 @@ content = """
 
 response = client.models.generate_content(
     model="gemini-2.5-flash",
-    contents=[{"role": "user", "parts": [{"text": content}]}],
+    contents=prompt,
 ) 
 print(response.text)

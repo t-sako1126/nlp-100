@@ -2,15 +2,8 @@ from google import genai
 
 client = genai.Client()
 
-contents = """
-           あなたは川柳専門家として
-           以下の10の川柳に対して面白さを評価してください
-           10段階の評価で、次のことを評価基準としてください
-
-           ・ユーモアや皮肉、風刺が効いているか
-           ・人間の心理や行動を鋭く捉えているか
-           ・軽妙洒脱で爽快感があるか
-           各川柳に対して、評価点数のみを数字で答えてください
+prompt = """
+           以下の10句の川柳を10段階で評価してください。
            1.  大掃除 見て見ぬふりの 来年へ
            2.  実家では 誰もが子供に 逆戻り
            3.  おせち見て 飽きる体に 罪悪感
@@ -25,6 +18,6 @@ contents = """
            
 response = client.models.generate_content(
     model="gemini-2.5-flash",
-    contents=[{"role": "user", "parts": [{"text": contents}]}],
+    contents=prompt,
 ) 
 print(response.text)
