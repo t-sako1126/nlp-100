@@ -1,0 +1,6 @@
+        A       B        C            D         pred  similarity
+0  Athens  Greece  Baghdad         Iraq        Iraqi    0.635187
+1  Athens  Greece  Bangkok     Thailand     Thailand    0.713767
+2  Athens  Greece  Beijing        China        China    0.723578
+3  Athens  Greece   Berlin      Germany      Germany    0.673462
+4  Athens  Greece     Bern  Switzerland  Switzerland    0.491975
