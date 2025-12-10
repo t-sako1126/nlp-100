@@ -16,7 +16,7 @@ model = gensim.models.KeyedVectors.load_word2vec_format(
 lines = []
 use_block = False
 
-with open('/home/sakoda/workspace/100_knocks/ch06/questions-words.txt', encoding='utf-8') as f:
+with open('/home/sakoda/workspace/100_knocks/ch06/questions-words.txt') as f:
     for line in f:
         line = line.strip()
         if line.startswith(':'):
@@ -59,4 +59,4 @@ result_df = pd.DataFrame(
     columns=['A', 'B', 'C', 'D', 'pred', 'similarity']
 )
 
-print(result_df.head())
+print(result_df.to_string())

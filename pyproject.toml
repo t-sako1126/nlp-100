@@ -16,5 +16,6 @@ dependencies = [
     "mecab-python3>=1.0.10",
     "pandas>=2.3.3",
     "requests>=2.32.5",
+    "scikit-learn>=1.7.2",
     "spacy>=3.8.11",
 ]
