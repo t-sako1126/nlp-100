@@ -1,4 +1,16 @@
 .DS_Store
+pyproject.toml
+.python-version
+uv.lock
 
 .env
 
+ch02/text/
+ch03/jawiki-uk.txt
+ch04/melos.txt
+wordsim353/
+questions-words.txt
+SST-2/
+.gz
+.zip
+.csv
