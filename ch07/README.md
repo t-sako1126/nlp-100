@@ -10,8 +10,8 @@
 |65|[65.py](code/65.py)|[65.txt](out/65.txt)|
 |66|[66.py](code/66.py)|[66.txt](out/66.txt)|
 |67|[67.py](code/67.py)|[67.txt](out/67.txt)|
-|68|[68.py](code/68.py)|[68.png](out/68_dendrogram.png)|
-|69|[69.py](code/69.py)|[69.png](out/69.tsne.png)|
+|68|[68.py](code/68.py)|[68.txt](out/68.txt)|
+|69|[69.py](code/69.py)|[69.png](out/69.png)|
 
 
 
