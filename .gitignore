@@ -1,7 +1,5 @@
 .DS_Store
 pyproject.toml
-.python-version
-uv.lock
 
 .env
 
