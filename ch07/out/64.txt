@@ -1,0 +1,4 @@
+text: it 's a charming and often affecting journey . 
+true label: 1
+P(y=0 | x): 0.004318356065481699
+P(y=1 | x): 0.9956816439345183

@@ -18,6 +18,6 @@ model = LogisticRegression(max_iter=1000)
 model.fit(X, y)
 
 # 学習済みモデルとベクトライザを保存
-joblib.dump(model, "ch07/out/62_model.joblib")
-joblib.dump(vectorizer, "ch07/out/62_vectorizer.joblib")
+joblib.dump(model, "ch07/out/62/62_model.joblib")
+joblib.dump(vectorizer, "ch07/out/62/62_vectorizer.joblib")
 
