@@ -11,6 +11,6 @@ ch04/melos.txt
 wordsim353/
 questions-words.txt
 SST-2/
-.gz
-.zip
-.csv
+*.gz
+*.zip
+*.csv
