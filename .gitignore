@@ -7,10 +7,11 @@
 
 ch02/text/
 ch03/jawiki-uk.txt
+high_school_mathmatics.csv
+high_school_mathmatics_ansD.csv
 ch04/melos.txt
 wordsim353/
 questions-words.txt
 SST-2/
 *.gz
 *.zip
-*.csv
