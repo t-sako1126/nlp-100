@@ -5,6 +5,8 @@
 
 .env
 
+file.py
+
 ch02/text/
 ch03/jawiki-uk.txt
 high_school_mathematics.csv
@@ -15,3 +17,5 @@ questions-words.txt
 SST-2/
 *.gz
 *.zip
+
+file.py
