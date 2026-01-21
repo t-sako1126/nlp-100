@@ -1,0 +1,6 @@
+device: cuda
+Epoch 1/5  Loss: 0.6752  DevAcc: 0.5665
+Epoch 2/5  Loss: 0.6543  DevAcc: 0.6216
+Epoch 3/5  Loss: 0.6361  DevAcc: 0.6548
+Epoch 4/5  Loss: 0.6178  DevAcc: 0.6778
+Epoch 5/5  Loss: 0.5998  DevAcc: 0.7236
