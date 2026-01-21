@@ -1,0 +1,3 @@
+train size: 66650
+dev size  : 872
+{'text': 'hide new secretions from the parental units ', 'label': tensor([0.]), 'input_ids': tensor([  5785,     66, 113845,     18,     12,  15095,   1594])}
