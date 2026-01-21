@@ -8,8 +8,8 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 def collate_one(batch):
     item = batch[0]
-    input_ids = item["input_ids"].unsqueeze(0)  # (1, L)
-    label = item["label"].view(1, 1)            # (1, 1)
+    input_ids = item["input_ids"].unsqueeze(0)
+    label = item["label"].view(1, 1)          
     return input_ids, label
 
 def main():
@@ -27,10 +27,10 @@ def main():
     with torch.no_grad():
         for input_ids, label in dev_dl:
             input_ids = input_ids.to(device)
-            label = label.to(device)                 # (1,1)
+            label = label.to(device)                 
 
-            prob = model(input_ids)                  # (1,1)
-            pred = (prob >= 0.5).float()             # (1,1) 0/1
+            prob = model(input_ids)                  
+            pred = (prob >= 0.5).float()             
 
             correct += (pred == label).sum().item()
             total += label.numel()
