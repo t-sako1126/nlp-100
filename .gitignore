@@ -17,5 +17,6 @@ questions-words.txt
 SST-2/
 *.gz
 *.zip
-
+*.pth
+ch08/code/__pycache__/
 file.py

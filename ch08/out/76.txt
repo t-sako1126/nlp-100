@@ -1,0 +1,10 @@
+Epoch 1/10  Loss: 0.6648  DevAcc: 0.6525
+Epoch 2/10  Loss: 0.6316  DevAcc: 0.6479
+Epoch 3/10  Loss: 0.6062  DevAcc: 0.7122
+Epoch 4/10  Loss: 0.5860  DevAcc: 0.7351
+Epoch 5/10  Loss: 0.5694  DevAcc: 0.7477
+Epoch 6/10  Loss: 0.5552  DevAcc: 0.7615
+Epoch 7/10  Loss: 0.5427  DevAcc: 0.7580
+Epoch 8/10  Loss: 0.5321  DevAcc: 0.7649
+Epoch 9/10  Loss: 0.5229  DevAcc: 0.7672
+Epoch 10/10  Loss: 0.5154  DevAcc: 0.7661

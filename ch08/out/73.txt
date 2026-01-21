@@ -1,0 +1,6 @@
+Epoch 1/10, Loss: 0.3889
+Epoch 2/10, Loss: 0.3769
+Epoch 3/10, Loss: 0.3762
+Epoch 4/10, Loss: 0.3765
+Epoch 5/10, Loss: 0.3763
+Early stopping at epoch 5 (best_loss=0.3762)
