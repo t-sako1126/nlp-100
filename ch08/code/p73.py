@@ -2,12 +2,9 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
 
-from p70 import emb, vocab_size, emb_dim          # E: (|V|+1, 300) torch.Tensor
-from p71 import train_data                      # [{'input_ids':..., 'label':...}, ...]
-from p72 import Bowmodel                        # embedding→平均→linear→sigmoid
-
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
+from p70 import emb, vocab_size, emb_dim
+from p71 import train_data
+from p72 import Bowmodel
 
 def collate_one(batch):
     item = batch[0]
@@ -15,16 +12,14 @@ def collate_one(batch):
     label = item["label"].view(1, 1)            # (1, 1)
     return input_ids, label
 
-
-
 def main():
     model = Bowmodel(vocab_size, emb_dim)
 
     # 事前学習済み埋め込みをセット＆固定（73の条件）
-    model.embedding.weight.data = emb.to(device)
+    model.embedding.weight.data = emb
     model.embedding.weight.requires_grad = False
 
-    model = model.to(device)
+    model = model
 
     loss_fn = nn.BCELoss()
     optimizer = torch.optim.SGD(model.linear.parameters(), lr=0.1)
@@ -40,8 +35,8 @@ def main():
         total_loss = 0.0
 
         for input_ids, label in train_dl:
-            input_ids = input_ids.to(device)
-            label = label.to(device)
+            input_ids = input_ids
+            label = label
 
             optimizer.zero_grad()
             prob = model(input_ids)        # (1,1)
