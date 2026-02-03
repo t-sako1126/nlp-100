@@ -1,0 +1,2 @@
+      score  token token_str                    sequence
+0  0.107119   4569       fun  the movie was full of fun.

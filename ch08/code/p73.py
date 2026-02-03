@@ -8,14 +8,13 @@ from p72 import Bowmodel
 
 def collate_one(batch):
     item = batch[0]
-    input_ids = item["input_ids"].unsqueeze(0)  # (1, L)
-    label = item["label"].view(1, 1)            # (1, 1)
+    input_ids = item["input_ids"].unsqueeze(0)  
+    label = item["label"].view(1, 1)            
     return input_ids, label
 
 def main():
     model = Bowmodel(vocab_size, emb_dim)
 
-    # 事前学習済み埋め込みをセット＆固定（73の条件）
     model.embedding.weight.data = emb
     model.embedding.weight.requires_grad = False
 
@@ -39,8 +38,8 @@ def main():
             label = label
 
             optimizer.zero_grad()
-            prob = model(input_ids)        # (1,1)
-            loss = loss_fn(prob, label)    # labelも(1,1)なので一致
+            prob = model(input_ids)       
+            loss = loss_fn(prob, label)  
             loss.backward()
             optimizer.step()
 
@@ -49,7 +48,6 @@ def main():
         avg_loss = total_loss / len(train_dl)
         print(f"Epoch {epoch+1}/{EPOCHS}, Loss: {avg_loss:.4f}", flush=True)
 
-        # 早期終了: 損失が改善しないepochが続いたら打ち切り
         if avg_loss < best_loss:
             best_loss = avg_loss
             bad_epochs = 0

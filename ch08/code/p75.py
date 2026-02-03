@@ -1,8 +1,9 @@
 import torch
 from p71 import train_data
 
+
 def collate(batch):
-    batch = sorted(batch, key=lambda x: x["input_ids"].numel(), reverse=True)
+    batch = sorted(batch, key=lambda x: x["input_ids"].numel(), reverse=True) # 長さ順にソート
 
     lengths = [ex["input_ids"].numel() for ex in batch]
     max_len = lengths[0]
