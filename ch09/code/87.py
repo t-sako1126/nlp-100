@@ -5,13 +5,7 @@ import torch
 import evaluate
 
 from datasets import Dataset
-from transformers import (
-    AutoTokenizer,
-    AutoModelForSequenceClassification,
-    Trainer,
-    TrainingArguments,
-    DataCollatorWithPadding,
-)
+from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments, DataCollatorWithPadding
 
 # GPU設定
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
