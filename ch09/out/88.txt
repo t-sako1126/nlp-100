@@ -1,0 +1,75 @@
+The movie was full of incomprehensibilities.
+Prediction: Negative (99.76%)
+
+The movie was full of fun.
+Prediction: Positive (99.88%)
+
+The movie was full of excitement.
+Prediction: Positive (99.86%)
+
+The movie was full of crap.
+Prediction: Negative (99.88%)
+
+The movie was full of rubbish.
+Prediction: Negative (99.88%)
+
+The movie was full of incomprehensibilities.
+Prediction: Negative (99.76%)
+
+The movie was full of fun.
+Prediction: Positive (99.88%)
+
+The movie was full of excitement.
+Prediction: Positive (99.86%)
+
+The movie was full of crap.
+Prediction: Negative (99.88%)
+
+The movie was full of rubbish.
+Prediction: Negative (99.88%)
+
+The movie was full of incomprehensibilities.
+Prediction: Negative (99.76%)
+
+The movie was full of fun.
+Prediction: Positive (99.88%)
+
+The movie was full of excitement.
+Prediction: Positive (99.86%)
+
+The movie was full of crap.
+Prediction: Negative (99.88%)
+
+The movie was full of rubbish.
+Prediction: Negative (99.88%)
+
+The movie was full of incomprehensibilities.
+Prediction: Negative (99.76%)
+
+The movie was full of fun.
+Prediction: Positive (99.88%)
+
+The movie was full of excitement.
+Prediction: Positive (99.86%)
+
+The movie was full of crap.
+Prediction: Negative (99.88%)
+
+The movie was full of rubbish.
+Prediction: Negative (99.88%)
+
+The movie was full of incomprehensibilities.
+Prediction: Negative (99.76%)
+
+The movie was full of fun.
+Prediction: Positive (99.88%)
+
+The movie was full of excitement.
+Prediction: Positive (99.86%)
+
+The movie was full of crap.
+Prediction: Negative (99.88%)
+
+The movie was full of rubbish.
+Prediction: Negative (99.88%)
+
