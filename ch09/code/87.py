@@ -13,6 +13,7 @@ from transformers import (
     DataCollatorWithPadding,
 )
 
+# GPU設定
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 if torch.cuda.is_available():
     torch.cuda.set_device(0)
@@ -23,15 +24,18 @@ model = AutoModelForSequenceClassification.from_pretrained(MODEL_ID, num_labels=
 
 data_collator = DataCollatorWithPadding(tokenizer)
 
+# データ読み込み
 train_df = pd.read_csv("ch07/SST-2/train.tsv", sep="\t", header=0)
 dev_df   = pd.read_csv("ch07/SST-2/dev.tsv",   sep="\t", header=0)
 
-# ★ label -> labels にしておく（確実）
+# Trainer用にカラム名を変える
 train_df = train_df.rename(columns={"label": "labels"})
 dev_df   = dev_df.rename(columns={"label": "labels"})
 
+# Datasetオブジェクトに変換
 train_ds = Dataset.from_pandas(train_df[["sentence", "labels"]])
 dev_ds   = Dataset.from_pandas(dev_df[["sentence", "labels"]])
+
 
 def preprocess(batch):
     return tokenizer(batch["sentence"], truncation=True, max_length=64)
@@ -39,7 +43,7 @@ def preprocess(batch):
 train_ds = train_ds.map(preprocess, batched=True)
 dev_ds   = dev_ds.map(preprocess, batched=True)
 
-# torch tensor化（DataCollatorと相性良い）
+# テンソル形式に変換
 train_ds.set_format(type="torch", columns=["input_ids", "attention_mask", "labels"])
 dev_ds.set_format(type="torch", columns=["input_ids", "attention_mask", "labels"])
 
@@ -55,7 +59,7 @@ training_args = TrainingArguments(
     per_device_eval_batch_size=256,
     learning_rate=1e-4,
     lr_scheduler_type="linear",
-    warmup_ratio=0.1,         # 警告は出るけど動く。気になるなら warmup_steps に置換
+    warmup_ratio=0.1,        
     num_train_epochs=3,
     eval_strategy="epoch",
     save_strategy="epoch",
