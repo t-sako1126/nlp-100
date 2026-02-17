@@ -1,0 +1,11 @@
+TOKENS: ['The', ' movie', ' was', ' full', ' of']
+0.021891	' jokes'
+0.018644	' great'
+0.011524	' laughs'
+0.010874	' bad'
+0.010668	' surprises'
+0.010528	' references'
+0.009992	' fun'
+0.007416	' humor'
+0.007408	' "'
+0.006709	' the'
