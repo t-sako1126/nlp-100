@@ -1,19 +1,32 @@
-from transformers import AutoTokenizer,AutoModelForCausalLM
 import torch
+from transformers import AutoTokenizer, AutoModelForCausalLM
 
-device="cuda"
-MODEL="gpt2"
-PROMPT="The movie was full of"
+model_name = "gpt2"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(model_name).eval()
 
-tok=AutoTokenizer.from_pretrained(MODEL)
-model=AutoModelForCausalLM.from_pretrained(MODEL).to(device).eval()
+prompt = "The movie was full of"
 
-input=tok(PROMPT,return_tensors="pt").to(device)
+# トークン化
+input_ids = tokenizer.encode(prompt, return_tensors="pt")
 
-def generate_text(**kwargs):
-    generate_id=model.generate(**input,max_new_tokens=40,pad_token_id=tok.eos_token_id,**kwargs)
-    print(tok.decode(generate_id[0],skip_special_tokens=True),"\n")
+def generate_text(sample, temperature):
+  output = model.generate(
+    input_ids,
+    max_length=50,
+    do_sample=sample,    
+    temperature=temperature    
+)
+  return output
+ 
+print("=== Greedy Search (temperature=1.0) ===")
+output = generate_text(sample=False, temperature=1.0)
+print(tokenizer.decode(output[0], skip_special_tokens=True))
 
-generate_text(do_sample=False)
-generate_text(do_sample=True,temperature=0.5)
-generate_text(do_sample=True,temperature=1.5)
+print("\n=== Sampling (temperature=0.5) ===")
+output = generate_text(sample=True, temperature=0.5)
+print(tokenizer.decode(output[0], skip_special_tokens=True))
+
+print("\n=== Sampling (temperature=1.5) ===")
+output = generate_text(sample=True, temperature=1.5)
+print(tokenizer.decode(output[0], skip_special_tokens=True))

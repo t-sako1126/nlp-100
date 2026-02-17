@@ -1,8 +1,10 @@
-The movie was full of jokes and jokes about how the movie was a joke. It was a joke about how the movie was a joke. It was a joke about how the movie was a joke. It was a joke about 
+=== Greedy Search (temperature=1.0) ===
+The movie was full of jokes and jokes about how the movie was a joke. It was a joke about how the movie was a joke. It was a joke about how the movie was a joke. It was a joke about how the movie was a
 
-The movie was full of bad jokes, bad dialogue, and bad music. It was a great movie, but it was also a bad movie.
+=== Sampling (temperature=0.5) ===
+The movie was full of laughs, and I think it's safe to say that the movie was about as good as it gets.
 
-There was a lot of talk about the ending, and I think that 
+The movie is set in a world where everyone is trying to figure out how to survive. In this world,
 
-The movie was full of character interactions: Howie (Josh Gad) tries to pull off the act of his first real relationship as The Wolf-Man, how he tries to prove that even with the use of fake skin to 
-
+=== Sampling (temperature=1.5) ===
+The movie was full of scenes showing scenes from another fictional and often completely unrealistic sci-fi franchise with the entire universe in focus. One movie was pretty straightforward at this point of time, and there should no doubt have happened a dozen other scenes later.
