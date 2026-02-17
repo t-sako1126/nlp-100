@@ -3,7 +3,6 @@ import pandas as pd
 from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-device = "cuda" if torch.cuda.is_available() else "cpu"
 model_name = "Qwen/Qwen3-4B-Instruct-2507"
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
