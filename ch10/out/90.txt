@@ -1,11 +1,12 @@
-TOKENS: ['The', ' movie', ' was', ' full', ' of']
-0.021891	' jokes'
-0.018644	' great'
-0.011524	' laughs'
-0.010874	' bad'
-0.010668	' surprises'
-0.010528	' references'
-0.009992	' fun'
-0.007416	' humor'
-0.007408	' "'
-0.006709	' the'
+トークンID: [464, 3807, 373, 1336, 286]
+トークン: The movie was full of
+' jokes' : 0.0219
+' great' : 0.0186
+' laughs' : 0.0115
+' bad' : 0.0109
+' surprises' : 0.0107
+' references' : 0.0105
+' fun' : 0.0100
+' humor' : 0.0074
+' "' : 0.0074
+' the' : 0.0067

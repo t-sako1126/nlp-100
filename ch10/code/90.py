@@ -1,27 +1,30 @@
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-device = "cuda"
-MODEL = "gpt2"
-PROMPT = "The movie was full of"
-K = 10
+model_name = "gpt2"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(model_name).eval()
 
-# トークナイザとモデルの読み込み
-tok = AutoTokenizer.from_pretrained(MODEL)
-model = AutoModelForCausalLM.from_pretrained(MODEL).eval()
-model.to(device)
+prompt = "The movie was full of"
 
-# プロンプトをトークン化してモデルに入力
-x = tok(PROMPT, return_tensors="pt")
-x = {k: v.to(device) for k, v in x.items()}
-ids = x["input_ids"][0].tolist()
-print("TOKENS:", [tok.decode([i]) for i in ids]) # トークン化されたプロンプトを表示
+# トークン化
+inputs = tokenizer(prompt, return_tensors="pt")
 
-# モデルの出力から次のトークンの確率を計算して表示
+#promptのトークンを出力
+print("トークンID:", inputs["input_ids"].tolist()[0])
+print("トークン:", tokenizer.decode(inputs["input_ids"][0]))
+
+# モデルの出力を取得
 with torch.no_grad():
-    logits = model(**x).logits[0, -1] 
-    probs = torch.softmax(logits, dim=-1)
-    p, i = torch.topk(probs, K)
+    outputs = model(**inputs) 
 
-for pp, ii in zip(p.tolist(), i.tolist()):
-    print(f"{pp:.6f}\t{repr(tok.decode([ii]))}")
+# 最後のトークンのロジットを取得
+logits = outputs.logits[:, -1, :]
+
+# 確率に変換
+probs = torch.softmax(logits, dim=-1)
+
+topk = torch.topk(probs, k=10)
+for token_id, prob in zip(topk.indices[0], topk.values[0]):
+    token = tokenizer.decode([token_id])
+    print(f"{token!r} : {prob.item():.4f}")
