@@ -38,7 +38,7 @@ class FrozenEmbedClassifier(nn.Module):
         # 分類器の定義
         hidden = self.llm.config.hidden_size
         self.clf = nn.Linear(hidden, num_labels).to(
-            device=self.llm.device, dtype=self.llm.dtype
+            device=self.llm.device, dtype=self.llm.dtype 
         )
         self.loss_fn = nn.CrossEntropyLoss()
 
@@ -49,10 +49,10 @@ class FrozenEmbedClassifier(nn.Module):
                 attention_mask=attention_mask,
                 output_hidden_states=True,
             )
-            # 最後の隠れ状態の平均を特徴量とする
+            # 隠れ状態の平均を特徴量とする
             last_hidden = out.hidden_states[-1] 
             emb = last_hidden.mean(dim=1) # 平均
-        logits = self.clf(emb)
+        logits = self.clf(emb) 
 
         loss = None
         # ラベルがある場合は損失を計算
