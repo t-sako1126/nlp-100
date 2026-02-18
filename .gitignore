@@ -21,3 +21,6 @@ SST-2/
 ch08/code/__pycache__/
 file.py
 ch09/out/87/
+ch10/out/qwen-sst2
+ch10/out/qwen-sst2-dpo
+ch10/out/97
