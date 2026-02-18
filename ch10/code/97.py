@@ -41,7 +41,7 @@ class FrozenEmbedClassifier(nn.Module):
             device=self.llm.device, dtype=self.llm.dtype
         )
         self.loss_fn = nn.CrossEntropyLoss()
-    # 順伝播
+
     def forward(self, input_ids=None, attention_mask=None, labels=None):
         with torch.no_grad(): # LLM実行
             out = self.llm(
