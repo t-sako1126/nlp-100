@@ -1,0 +1,11 @@
+system
+You are Qwen, created by Alibaba Cloud. You are a helpful assistant.
+user
+Decide if the sentiment is positive or negative.
+Answer with only one word: positive or negative.
+
+Sentence: This movie was absolutely fantastic!
+Answer:
+assistant
+positive impression 
+
